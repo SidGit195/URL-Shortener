@@ -1,0 +1,53 @@
+Window or alert or dom related (jo chize server side me kaam nahi aati || frontend part of js)  yeh sab chize node me nahi hoti hai
+
+// we should always try to write Non-Blocking (Async) code
+
+node fileName           // to run a file
+
+npm init        // to produce package-json
+// package.json me hum packages install kar sakte hai
+// package.json me khud ki scripts bna sakte hai
+// npm run scriptName (run all commands in a single command)
+
+const varName = require("./fileName");          // agar name direct diya to then it looks for built-in function or external installed packages
+// ./xyz it looks for current directory
+
+Jisme function use karo use export jarure karle
+for export
+module.exports = {                 // module chizo ko replace kar deta hai
+    addfun: add,
+    sub,
+}
+// or another way
+exports.add = (a, b) => a + b;
+// we have to export every function
+
+# File IO
+const fs = require("fs");
+Sync-ronus return karta hai
+Async-ronus doesn't return anything instead we have to give a callback function as a parameter
+
+# For server
+We use http module 
+createServer ko call karte hai eske andar request handler daite hai
+Assign a port number
+
+npm i nodemon           // auto start server after every change
+
+# MongoDB
+npm i mongoose          
+// connection with mongodb
+1. mongoose.connect()
+2. Schema formation
+3. Model formation
+// some commands
+use dbs 
+show dbs 
+use db_name
+show collections
+db.users.find({})
+
+# Model View Controller
+Controller manipulates Model and Model updates View
+
+Model.findOneAndUpdate(filter, update, options, callback)
